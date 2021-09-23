@@ -1,23 +1,94 @@
-import logo from './logo.svg';
+
+import {useState, useEffect} from 'react';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import axios from 'axios';
+import Header from './components/Header';
+import Navbar  from './components/Navbar';
+
+
+import Post from './components/Post';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact'
+import Recipe from './components/Recipe';
+import Addrecipe from './components/Addrecipe';
+
+
+
+
 
 function App() {
+
+  const [articles, setArticles] = useState([])
+
+useEffect(() => {
+  
+  axios.get("https://pacific-beach-62332.herokuapp.com/recipes")
+  .then(json=> {
+  console.log(json.data.data[0])
+  
+
+  setArticles(json.data.data)
+  })
+  .catch((err)=>console.log(err)) 
+  
+}, [])
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <div className="container">
+       
+     
+     <div>
+       <Header />
+
+       <div className="nav-switch-div"> 
+       <Navbar />
+       <Switch>
+       <Route  exact path="/">
+      <Home  />
+      </Route>
+      <Route   path="/home">
+      <Addrecipe />
+      </Route>
+      <Route path="/categories">
+      <Recipe recipes={articles}/>
+      </Route>
+
+      <Route path="/recipes/:_id">
+      <Post   />
+
+      </Route>
+
+
+
+      <Route path="/about">
+      <About />
+      </Route>
+      <Route path="/contact">
+      <Contact  />
+      </Route>
+       </Switch>
+       </div>
+       
+
+   
+
+     
+   <Footer />
+       
+      
+     </div> 
+         </div>
+      
     </div>
   );
 }

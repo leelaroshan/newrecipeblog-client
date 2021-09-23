@@ -1,0 +1,46 @@
+
+.footer{
+   
+    width: auto;
+    height: 100px;
+    background-color: darkolivegreen;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* position:fixed; */
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.follow{
+    display: flex;
+    flex-direction: row;
+   
+
+}
+.follow h4{
+    display: inline-block;
+}
+.youtube{
+    color: black;
+    height: 50px;
+    width:50px;
+}
+.instagram{
+    color: black;
+    height: 50px;
+    width:50px;
+
+}
+.facebook{
+
+ color: black;
+    height: 50px;
+    width:50px;
+
+}

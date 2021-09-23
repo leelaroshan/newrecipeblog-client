@@ -1,0 +1,19 @@
+.title{
+    padding: 20px;
+    color:red;
+
+
+}
+
+.image{
+    height: 300px;
+    width:300px;
+
+}
+section{
+    margin-left: 90px;
+    /* background-color:gainsboro; */
+    line-height: 25px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}

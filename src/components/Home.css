@@ -1,0 +1,44 @@
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left:20%; */
+   
+    background-image: url(https://static.toiimg.com/thumb/64699039.cms?width=1200&height=900);
+ 
+    background-repeat: no-repeat;
+    background-size: auto ;
+    background-position: center;
+    /* width: 80%; */
+    height: 700px;
+  }
+  
+  .head{
+     color: black;
+      text-align: center;
+      width: 70%;
+      font-size: 2.5em;
+      /* text-shadow: black 1px 0 10px; */
+  }
+  
+  .content-div{
+    margin-left: 20%;
+    margin-right:20%;
+    line-height: 25px;
+    padding-top:20px;
+    padding-bottom: 20px;
+  
+  }
+  
+  .content-section{
+    background-color: darkolivegreen;
+    
+  }
+  .content-div p{
+    margin-left: 60px;
+  }
+  
+  
+  
