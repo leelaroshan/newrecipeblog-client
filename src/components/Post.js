@@ -37,7 +37,7 @@ export default function Post() {
   if (loading) return "Loading...";
   console.log(article);
     
-    const {title,file,description,preparation} = article;
+    const {title,url,description,preparation} = article;
     const postdescription =  marked(preparation);
     console.log(_id, title,description,preparation) ;
 
@@ -51,7 +51,7 @@ export default function Post() {
 
 <div className="post">
       <h2 className="title">{title}</h2>
-      {file && <img src={file.url} className="image" alt={title}  title={file.fileName}/>}
+      {url && <img src={url} className="image" alt={title}  title={title}/>}
     
       <section className="description" dangerouslySetInnerHTML={{__html:postdescription}} />
       

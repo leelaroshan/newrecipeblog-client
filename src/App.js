@@ -56,7 +56,7 @@ useEffect(() => {
        <Route  exact path="/">
       <Home  />
       </Route>
-      <Route   path="/home">
+      <Route   path="/addrecipe">
       <Addrecipe />
       </Route>
       <Route path="/categories">

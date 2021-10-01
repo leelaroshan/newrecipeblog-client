@@ -3,6 +3,16 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import TextareaAutosize from "@material-ui/core/TextareaAutosize";
+
+
+
+
+
+
 import './Addrecipe.css'
 
 export default function Addrecipe() {
@@ -40,14 +50,58 @@ export default function Addrecipe() {
 
 
 
-    return (
-        <div className="form-container">
-            <h2>Add your own Recipe</h2>
+   return (
+     <div className="form-container">
+       
+           <h2>Add your own Recipe</h2>
 
             <form onSubmit={handleSubmit}>
+            <div className="form-div"> 
+            <TextField 
+             label="Title" 
+             variant="outlined"
+             value={title} onChange={(e) =>setTitle(e.target.value)}
+            
+            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+           />
+           <TextField 
+             label="Image" 
+             variant="outlined"
+             value={url} onChange={(e) =>setUrl(e.target.value)}
+            
+            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+           />
+            <TextField 
+             label="Description" 
+             variant="outlined"
+             value={description} onChange={(e) =>setDescription(e.target.value)}
+            
+            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+           />
+           <TextareaAutosize
+           maxRows={10}
+           aria-label="maximum height"
+           placeholder="Maximum 10 rows"
+           defaultValue="add preparation."
+           value={preparation} 
+           onChange={(e) =>setPreparation(e.target.value)}
+
+           style={{ width: "300px", marginBottom: "30px"}}
+            />
+
+          <Button  type="submit"
+          variant="contained"   
+          
+         style={{ color: "teal",backgroundColor:"#EEE3AD", width:"300px"  }} >
+          Add</Button>
+
+          </div>
+          </form>
+ 
+
            
-            <h4>Title: </h4>
-            <input type="text" name="title"  value={title} onChange={(e) =>setTitle(e.target.value)} />
+            {/* <h4>Title: </h4>
+            <input type="text" name="title"   />
           
           <br></br>
           
@@ -68,15 +122,16 @@ export default function Addrecipe() {
 
           <h4> Preparation:</h4>
            
-            <textarea type="text" name="preparation" value={preparation} onChange={(e) =>setPreparation(e.target.value)} />
+          <textarea type="text" name="preparation" value={preparation} onChange={(e) =>setPreparation(e.target.value)} />
           
 
           
-          <button type="submit">Add Recipe</button>
+          <button type="submit" className="add-btn">Add Recipe</button>
 
-            </form>
+            </form> */}
          
-      
+         
+            
         </div>
     )
 }
