@@ -81,18 +81,18 @@ export default function Addrecipe() {
            <TextareaAutosize
            maxRows={10}
            aria-label="maximum height"
-           placeholder="Maximum 10 rows"
+           placeholder="Add Preparation"
            defaultValue="add preparation."
            value={preparation} 
            onChange={(e) =>setPreparation(e.target.value)}
 
-           style={{ width: "300px", marginBottom: "30px"}}
+           style={{ width: "300px",height: "200px", marginBottom: "30px"}}
             />
 
           <Button  type="submit"
           variant="contained"   
           
-         style={{ color: "teal",backgroundColor:"#EEE3AD", width:"300px"  }} >
+         style={{ color: "teal",backgroundColor:"bisque", width:"300px"  }} >
           Add</Button>
 
           </div>
