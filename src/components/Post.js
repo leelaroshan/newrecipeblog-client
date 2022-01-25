@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import './Post.css';
 
+
 export default function Post() {
 
 
@@ -51,7 +52,9 @@ export default function Post() {
 
 <div className="post">
       <h2 className="title">{title}</h2>
-      {url && <img src={url} className="image" alt={title}  title={title}/>}
+        {url && <img src={url} className="image" alt={title} title={title} />}
+        
+  
     
       <section className="description" dangerouslySetInnerHTML={{__html:postdescription}} />
       

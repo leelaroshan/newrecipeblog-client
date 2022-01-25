@@ -1,6 +1,7 @@
 .title{
     padding: 20px;
-    color:red;
+    color:#102A42;
+    font-family: fantasy;
 
 
 }
@@ -8,6 +9,10 @@
 .image{
     height: 300px;
     width:300px;
+    border-radius: 10%;
+
+}
+.image:hover{
 
 }
 section{
@@ -17,3 +22,4 @@ section{
     padding-bottom: 30px;
     padding-top: 20px;
 }
+

@@ -2,12 +2,13 @@
 .footer{
    
     width: auto;
-    height: 100px;
+    /* height: 100px; */
     background-color: darkolivegreen;
     color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding:20px;
     /* position:fixed; */
 }
 
@@ -62,4 +63,20 @@
     height: 50px;
     width:50px;
 
+}
+
+.email{
+    border: none;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.submit_btn{
+    padding: 10px 15px;
+    /* background-color: yellow; */
+    color: black;
+    border-radius: 20px;
+    border:none;
+    margin-top: 20px;
 }

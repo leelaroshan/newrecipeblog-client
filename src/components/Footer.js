@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="sign-up"> 
             <h4>Sign up for our news letter </h4>
             <input type="text" placeholder="email address" className="email"></input>
-            <button>submit</button>
+            <button className='submit_btn'>submit</button>
            
             </div>
             

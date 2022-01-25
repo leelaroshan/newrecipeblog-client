@@ -52,55 +52,72 @@ export default function Addrecipe() {
 
    return (
      <div className="form-container">
-       
-           <h2>Add your own Recipe</h2>
+       <h2>Add your own Recipe</h2>
 
-            <form onSubmit={handleSubmit}>
-            <div className="form-div"> 
-            <TextField 
-             label="Title" 
+       <form onSubmit={handleSubmit}>
+         <div className="form-div">
+           <TextField
+             label="Title"
              variant="outlined"
-             value={title} onChange={(e) =>setTitle(e.target.value)}
-            
-            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+             value={title}
+             onChange={(e) => setTitle(e.target.value)}
+             style={{
+               marginBottom: '20px',
+               marginTop: '20px',
+               width: '300px',
+               height: '50px',
+             }}
            />
-           <TextField 
-             label="Image" 
+           <TextField
+             label="Image"
              variant="outlined"
-             value={url} onChange={(e) =>setUrl(e.target.value)}
-            
-            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+             value={url}
+             onChange={(e) => setUrl(e.target.value)}
+             style={{
+               marginBottom: '20px',
+               marginTop: '20px',
+               width: '300px',
+               height: '50px',
+             }}
            />
-            <TextField 
-             label="Description" 
+           <TextField
+             label="Description"
              variant="outlined"
-             value={description} onChange={(e) =>setDescription(e.target.value)}
-            
-            style={{ marginBottom: "20px",marginTop:"20px", width:"300px", height:"50px"}}
+             value={description}
+             onChange={(e) => setDescription(e.target.value)}
+             style={{
+               marginBottom: '20px',
+               marginTop: '20px',
+               width: '300px',
+               height: '50px',
+             }}
            />
            <TextareaAutosize
-           maxRows={10}
-           aria-label="maximum height"
-           placeholder="Add Preparation"
-           defaultValue="add preparation."
-           value={preparation} 
-           onChange={(e) =>setPreparation(e.target.value)}
+             maxRows={10}
+             aria-label="maximum height"
+             placeholder="Add Preparation"
+             defaultValue="add preparation."
+             value={preparation}
+             onChange={(e) => setPreparation(e.target.value)}
+             style={{ width: '300px', height: '200px', marginBottom: '30px' }}
+           />
 
-           style={{ width: "300px",height: "200px", marginBottom: "30px"}}
-            />
+           <Button
+             type="submit"
+             variant="contained"
+             style={{
+               color: 'black',
+               backgroundColor: 'darkolivegreen',
+               width: '300px',
+               fontSize: '20px'
+             }}
+           >
+             Add
+           </Button>
+         </div>
+       </form>
 
-          <Button  type="submit"
-          variant="contained"   
-          
-         style={{ color: "teal",backgroundColor:"bisque", width:"300px"  }} >
-          Add</Button>
-
-          </div>
-          </form>
- 
-
-           
-            {/* <h4>Title: </h4>
+       {/* <h4>Title: </h4>
             <input type="text" name="title"   />
           
           <br></br>
@@ -129,9 +146,6 @@ export default function Addrecipe() {
           <button type="submit" className="add-btn">Add Recipe</button>
 
             </form> */}
-         
-         
-            
-        </div>
-    )
+     </div>
+   );
 }

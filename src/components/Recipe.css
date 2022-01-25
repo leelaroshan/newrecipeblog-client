@@ -16,7 +16,7 @@
 
 .background{
     text-align: center;
-    background-color: bisque;
+    background-color: #F5FEFF;
     /* width: 1100px;
     color:#EEE3AD;
     height: 500px;
@@ -26,8 +26,10 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    
+
 }
-.card{
+.recipe_card{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,29 +40,203 @@
     /* border:1px solid lightseagreen; */
     color:black;
     margin-left: 60px;
-   
+    border: 1px solid #48A6E9;
+    border-radius: 7%;
+   margin: 20px;
+   padding-bottom: 30px;
+     background-color:#95A88C ;
+     /* background-color:#429b98 ; */
+     /* background-color:#e0ffe0 ; */
+     /* background-color:#80a7aa ; */
+
+
+
     
 }
-.card h3{
-    padding:20px;
+
+.recipe_card:hover{
+
+   transform: translateY('20px');
+    cursor: pointer;
+
 
 }
+
+
+
+.card h3{
+    padding:20px;
+    font-family: fantasy;
+
+}
+
+.recipe_title{
+     padding:0px;
+    font-family: fantasy;
+}
 .card-img{
-    
-    /* margin-left: 70px; */
+    width: 300px;
+    height: 200px;
     padding-bottom:20px;
+    border-radius: 10%;
    
 
 }
 
 .readbtn{
-    width:70px;
-    height:20px;
-    /* padding:10px; */
+  
+    padding: 10px 15px;
     cursor: pointer;
-    outline: none;
+    border: none;
     border-radius: 10px;
     background-color:rgb(156, 177, 120) ;
-    border-color:rgb(106, 129, 66);
+    background-color:rgb(94, 139, 22);
+     background-color:#F2F5F9 ;
+     font-size: 15px;
+ 
 }
 
+.readbtn:hover{
+    padding: 10px 15px;
+    color: #48A6E9;
+    background-color:#F2F5F9 ;
+    color:rgb(94, 139, 22);
+    background-color:black;
+
+    
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+
+
+/* ************************************            EXTRA   CARD EFFECT                      **************************** */
+
+
+.recipe_card_container {
+  position : relative;
+  
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-wrap :wrap;
+  padding : 30px;  
+}
+
+.recipe_card_container .recipe_hover_card {
+  position: relative;
+  max-width : 300px;
+  height : 205px;  
+  background-color : #fff;
+   background-color:#95A88C ;
+  margin : 50px 50px;
+  padding : 20px 20px;
+  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+.recipe_card_container .recipe_hover_card:hover {
+  height : 280px;    
+}
+
+
+.recipe_card_container .recipe_hover_card .recipe_image {
+  position : relative;
+  width : 300px;
+  height : 200px;
+   padding-bottom:20px;
+  
+  top : -40%;
+  left: 2px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.recipe_card_container .recipe_hover_card  .recipe_image img {
+ 
+  max-width : 100%;
+  border-radius : 15px;
+}
+
+
+.recipe_card_container .recipe_hover_card .recipe_content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.recipe_card_container .recipe_hover_card:hover .recipe_content {
+   margin-top : 30px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+} 
+
+
+
+
+@media screen and (max-width: 414px){
+
+
+
+.recipe_card_container {
+  position : relative;
+  
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-wrap :wrap;
+  padding : 30px;  
+}
+
+  
+.recipe_card_container .recipe_hover_card {
+  position: relative;
+  max-width : 220px;
+  height : 155px;  
+  background-color : #fff;
+   background-color:#95A88C ;
+  margin : 50px 10px;
+  padding : 20px 10px;
+  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+.recipe_card_container .recipe_hover_card:hover {
+  height : 200px;    
+}
+
+
+
+.recipe_card_container .recipe_hover_card .recipe_image {
+  position : relative;
+  width : 200px;
+  height : 200px;
+   padding-bottom:20px;
+  
+  top : -40%;
+  left: 2px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.recipe_card_container .recipe_hover_card  .recipe_image img {
+ 
+  max-width : 100%;
+  border-radius : 15px;
+}
+}

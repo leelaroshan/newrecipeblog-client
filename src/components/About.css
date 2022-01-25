@@ -14,3 +14,20 @@
 .contact{
     color: darkolivegreen;
 }
+
+
+
+@media screen and (max-width: 414px){
+
+
+
+
+.about-content{
+    margin-left: 50px;
+    margin-right:50px;
+    line-height: 25px;
+    
+}
+
+    
+}

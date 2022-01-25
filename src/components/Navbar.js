@@ -1,12 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Navbar.css';
 import {Link} from 'react-router-dom';
 
 export default function Navbar() {
+
+
+
+    // const [isMobile, setIsMobile] = useState(false);
     return (
-        <div className="navbar">
+        <div className= "navbar" >
             
-        <nav className="navmenu"> 
+        <nav className= "navmenu"> 
         <Link to="/home"  className="nav-item" >Home</Link>
        
         <Link to="/categories"  className="nav-item" >Recipes</Link>
